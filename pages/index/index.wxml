@@ -1,0 +1,51 @@
+<!--index.wxml-->
+<view class="splashPage">
+  <!-- <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+    <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view> -->
+  <!-- <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view> -->
+  <image class='splash-image' src="../../image/init_bg.png" mode="aspectFit"/>
+  <view class='bottomContainer'>
+    <image class='btnImg' src="../../image/init_start_btn.png" mode="aspectFit"/>
+    <!-- <button class='buttonHome' wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo"      bindgetuserinfo="getUserInfo" >
+    </button> -->
+    <button class='buttonHome' bindtap='showBottomDialog'>
+    </button>
+  </view>
+  
+  <!-- 底部授权弹窗 -->
+  <view class='weui-mask_transparent actionsheet__mask'></view>
+  <view class='weui-actionsheet dialog-container' hidden="{{dialogHidden}}">
+    <view class='weui-flex about-container'>
+      <image class="logo" src="../../image/logo.png" mode="cover"></image>
+      <text class='about-name'>倍儿鲜</text>
+    </view>
+    <view class='weui-flex'>
+      <text class='permission-text'>请求获取您的昵称、头像、性别等信息</text>
+    </view>
+    <view class='weui-flex' style='margin-top:10px'>
+      <view>
+        <image class='logo' src="{{userInfo.avatarUrl}}" mode="aspectFit"></image>
+      </view>
+      <view class='userinfo-container'>
+        <label>微信个人信息</label>
+        <text>{{userInfo.nickName}}</text>
+      </view>
+    </view>
+    <view class='weui-flex' style='margin-top:20px'>
+      <view class='weui-flex__item'>
+        <button class='weui-btn buttonLeft' type='default' bindtap='onDialogDismiss'>取消</button>
+      </view>
+      <view class='weui-flex__item'>
+        <button class='weui-btn buttonRight' type='primary' bindtap='onPermissionAllowed' open-type="getUserInfo" bindgetuserinfo="getUserInfo">允许</button>
+      </view>
+      
+    </view>
+  </view>
+</view>

@@ -1,0 +1,59 @@
+<!--pages/detail/detail.wxml-->
+<view>
+  <loading hidden="{{hidden}}">
+        加载中...
+  </loading>
+  <view class='weui-flex'>
+    <label class='labelTextStyle'>顾客姓名：</label>
+    <text class='textContainerStyle'>{{customer}}</text>
+  </view>
+  <view class='weui-flex' >
+    <label class='labelTextStyle'>顾客昵称：</label>
+    <text class='textContainerStyle'>{{nickname}}</text>
+  </view>
+  <view class='weui-flex' >
+    <label class='labelTextStyle'>所购商品：</label>
+    <text class='textContainerStyle'>{{goodName}}</text>
+  </view>
+  <view class='weui-flex' >
+    <label class='labelTextStyle'>顾客地址：</label>
+    <text class='textContainerStyle'>{{address}}</text>
+  </view>
+  <view class='weui-flex' >
+    <label class='labelTextStyle'>下单时间：</label>
+    <text class='textContainerStyle'>{{orderTime}}</text>
+  </view>
+      
+  <view class='weui-flex' >
+    <label class='labelTextStyle'>联系方式：</label>
+    <text class='textContainerStyle'>{{phone}}</text>
+  </view>
+  <view class='weui-flex' >
+    <label class='labelTextStyle'>订单金额：</label>
+    <text class='textContainerStyle'>{{goodPrice}}</text>
+  </view>
+  <view class='weui-flex' >
+    <label class='labelTextStyle'>物流单号：</label>
+    <text class='textContainerStyle'>{{orderNumber}}</text>
+  </view>
+  <view class='weui-flex' >
+    <label class='labelTextStyle'>代理人：</label>
+    <text class='textContainerStyle'>{{proxyName}}</text>
+  </view>
+
+  <view class='weui-flex' >
+    <label class='labelTextStyle'>支付状态：</label>
+    <text class='textContainerStyle'>{{orderStatus}}</text>
+  </view>
+
+  <view class='weui-flex' >
+    <label class='labelTextStyle'>商品类型：</label>
+    <text class='textContainerStyle'>{{goodType}}</text>
+  </view>
+
+  <image class="editButton" src="../../image/info_edit_icon.png" 
+  bindtap="onEditClick" mode="aspectFit"></image>
+  <image class="deleteButton" src="../../image/info_delete_icon.png" 
+  bindtap="onDeleteClick" mode="aspectFit"></image>
+</view>
+

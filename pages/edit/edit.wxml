@@ -1,0 +1,87 @@
+<!--pages/edit/edit.wxml-->
+<loading hidden="{{hidden}}">
+        加载中...
+</loading>
+<view>
+  <view>
+    <form bindsubmit="formSubmit" bindreset="formReset">
+      <view class='weui-flex' >
+        <label class='labelTextStyle'>顾客姓名：</label>
+        <input class='inputContainerStyle' placeholder-class='hintTextStyle' name="input_customer" placeholder="请输入顾客姓名" value="{{customer}}"></input>
+      </view>
+      <view class='weui-flex' >
+        <label class='labelTextStyle'>顾客昵称：</label>
+        <input class='inputContainerStyle' placeholder-class='hintTextStyle' name="input_nickname" placeholder="请输入顾客昵称" value="{{nickname}}"></input>
+      </view>
+      <view class='weui-flex' >
+        <label class='labelTextStyle'>所购商品：</label>
+        <input class='inputContainerStyle' placeholder-class='hintTextStyle' name="input_good" placeholder="请输入商品名称" value="{{goodName}}"></input>
+      </view>
+      <view class='weui-flex' >
+        <label class='labelTextStyle'>顾客地址：</label>
+        <input class='inputContainerStyle' placeholder-class='hintTextStyle' name="input_address" placeholder="请输入顾客地址" value="{{address}}"></input>
+      </view>
+      <view class='weui-flex' >
+        <label class='labelTextStyle'>下单时间：</label>
+        <input class='inputContainerStyle' placeholder-class='hintTextStyle' name="input_time" placeholder="请输入下单时间" value="{{orderTime}}"></input>
+      </view>
+      
+      <view class='weui-flex' >
+        <label class='labelTextStyle'>联系方式：</label>
+        <input class='inputContainerStyle' placeholder-class='hintTextStyle' name="input_phone" placeholder="请输入顾客电话" value="{{phone}}"></input>
+      </view>
+      <view class='weui-flex' >
+        <label class='labelTextStyle'>订单金额：</label>
+        <input class='inputContainerStyle' placeholder-class='hintTextStyle' name="input_money" placeholder="请输入订单金额" value="{{goodPrice}}"></input>
+      </view>
+      <view class='weui-flex' >
+        <label class='labelTextStyle'>物流单号：</label>
+        <input class='inputContainerStyle' placeholder-class='hintTextStyle' name="input_order_no" placeholder="请输入物流单号" value="{{orderNumber}}"></input>
+      </view>
+      <view class='weui-flex' >
+        <label class='labelTextStyle'>代理人：</label>
+        <input class='inputContainerStyle' placeholder-class='hintTextStyle' name="input_proxy" placeholder="请输入代理人姓名" value="{{proxyName}}"></input>
+      </view>
+
+      <view class='weui-flex' >
+        <label class='labelTextStyle'>支付状态：</label>
+        <radio-group name="pay_state" class="radioGroupStyle">
+          <label>
+            <radio value="已支付" checked="{{1 == orderStatus ? true : false}}"></radio>
+            已支付
+          </label>
+          <label>
+            <radio value="未支付" checked="{{0 == orderStatus ? true : false}}"></radio>
+            未支付
+          </label>
+        </radio-group>
+      </view>
+
+      <view class='weui-flex' >
+        <label class='labelTextStyle'>商品类型：</label>
+        <radio-group name="good_type" class="radioGroupStyle">
+          <label>
+            <radio value="干货" checked="{{1 == goodType ? true : false}}"></radio>
+            干货
+          </label>
+          <label>
+            <radio value="鲜货" checked="{{0 == goodType ? true : false}}"></radio>
+            鲜货
+          </label>
+        </radio-group>
+      </view>
+
+      <view class='btnContainer' >
+        <button class="btnNormal" hover-class='btnHover' form-type='submit'>提交</button>
+        <!-- <button class="weui-btn mini-btn" size="mini" type="warn" form-type='reset'>重置</button> -->
+      </view>
+    </form>
+  </view>
+  <!-- <view class='weui-footer'>
+    <view class='weui-footer__links'>
+      <navigator url="" class='weui-footer__link'>上海xxx有限责任公司</navigator>
+    </view>
+    <view class='weui-footer__text'>Copyright © 2016-2019 Moosphan</view>
+  </view> -->
+  
+</view>

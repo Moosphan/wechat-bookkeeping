@@ -1,0 +1,37 @@
+/* pages/detail/detail.wxss */
+.labelTextStyle {
+  color: #2c2c2c;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.textContainerStyle {
+  color: #2c2c2c;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: solid #cccccc 1px ;
+}
+
+.editButton {
+  width: 60px;
+  height: 60px;
+  float: right;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  margin: 16px;
+}
+
+.deleteButton {
+  width: 60px;
+  height: 60px;
+  float: right;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  margin-right: 86px;
+  margin-bottom: 16px;
+}

@@ -1,0 +1,16 @@
+/**app.wxss**/
+@import "weui.wxss";
+.container {
+  height: 100%;
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+} 
+.pagging {
+  width: 100%;
+  background-color: white
+}

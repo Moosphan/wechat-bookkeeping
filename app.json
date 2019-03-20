@@ -1,0 +1,15 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/order/order",
+    "pages/edit/edit",
+    "pages/detail/detail"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#f8d300",
+    "navigationBarTitleText": "倍儿鲜",
+    "navigationBarTextStyle": "white"
+  }
+}

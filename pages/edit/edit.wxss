@@ -1,0 +1,48 @@
+/* pages/edit/edit.wxss */
+.labelTextStyle {
+  color: #2c2c2c;
+  font-size: 16px;
+  padding: 10px;
+}
+
+.inputContainerStyle {
+  color: #2c2c2c;
+  font-size: 14px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  border-bottom: solid #cccccc 1px ;
+}
+
+.hintTextStyle {
+  color: #cccccc;
+  font-size: 14px;
+}
+
+.radioGroupStyle {
+  padding: 8px;
+}
+
+.btnContainer {
+  margin-top: 26px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+.btnNormal {
+  width: 152px;
+  height: 42px;
+  text-align: center;
+  color: white;
+  background-color: #f8d300;
+  border-radius: 22px;
+}
+
+.btnHover {
+  width: 152px;
+  height: 42px;
+  text-align: center;
+  color: white;
+  background-color: #f8be00;
+  border-radius: 22px;
+}
+

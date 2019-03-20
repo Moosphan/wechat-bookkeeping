@@ -1,0 +1,67 @@
+<!--pages/order/order.wxml-->
+<view class='pageContainer'>
+  <loading hidden="{{hidden}}">
+        加载中...
+  </loading>
+  <!-- 搜索框 -->
+  <view class='search-container'>
+    <view class="weui-search-bar {{inputShown? 'search-style-underway' : 'search-style-normal'}}">
+      <view class="weui-search-bar__form">
+        <view class="weui-search-bar__box">
+            <icon class="weui-icon-search_in-box" type="search" size="14"></icon>
+            <input type="text" class="weui-search-bar__input" placeholder="请输入搜索关键词" value="{{inputContent}}" focus="{{inputShown}}" bindinput="onInputChanged" bindconfirm="onInputConfirmed" confirm-type='search'/>
+            <view class="weui-icon-clear" wx:if="{{inputContent.length > 0}}" bindtap="clearInputContent">
+              <icon type="clear" size="14"></icon>
+            </view>
+        </view>
+        <label class="weui-search-bar__label" hidden="{{inputShown}}" bindtap="showInput">
+          <icon class="weui-icon-search" type="search" size="14"></icon>
+          <view class="weui-search-bar__text">搜索</view>
+        </label>
+      </view>
+
+        <view class="weui-search-bar__cancel-btn search-cancel" hidden="{{!inputShown}}" bindtap="hideInput">取消</view>
+    </view>
+    
+    <!-- 搜索结果页 -->
+    <view class="weui-cells search-result-container" wx:if="{{inputContent.length > 0}}" wx:for-items="{{searchValues}}" data-id="{{item.objectId}}">
+      <view class='weui-cell' data-id="{{item.objectId}}" bindtap='onSearchResultClick'>
+        <text class='search-result-text' data-id="{{item.objectId}}">{{item.customer}}</text>
+        <text class='search-result-text' data-id="{{item.objectId}}">{{item.goodName}}</text>
+        <text class='search-result-text' data-id="{{item.objectId}}">{{item.proxyName}}</text>
+      </view>
+    </view>
+  </view>
+
+  <!-- 头部图片 -->
+  <view class='headerContainer'>
+     <image class='header' src='../../image/header.png' mode='widthFix'/>
+     <image class='avatar' src = "{{src}}" mode='cover'/>
+  </view >
+    
+  <view class='list-container' wx:if="{{orderList.length<=0}}">
+    <image style="width:150px;height: 178px" src='../../image/empty_holder.png' mode='aspectFit'></image>
+    <text class='emptyTip'>这里空空如也，快点击右下方\n按钮添加一则记录吧～</text>
+  </view>
+  <!-- list列表 -->
+  <view class='card' wx:for-items="{{orderList}}" wx:key="orders" data-id="{{item.objectId}}">
+    <view bindtap="onItemClick" data-id="{{item.objectId}}">
+      <text class="title" data-id="{{item.objectId}}">{{item.customer}}</text>
+      <text class='time' data-id="{{item.objectId}}">{{item.updatedAt}}</text>
+      <text class='money' data-id="{{item.objectId}}">¥ {{item.goodPrice}}</text>
+      <text class='proxy' data-id="{{item.objectId}}">代理人：{{item.proxyName}}</text>
+      <text class='goodInfo' data-id="{{item.objectId}}">{{item.goodName}}</text>
+      <view class='location' data-id="{{item.objectId}}">
+        <image class='location-icon' data-id="{{item.objectId}}" src="../../image/location_icon.png"></image>
+        <text data-id="{{item.objectId}}">{{item.address}}</text>
+      </view>
+      <view class='phone' data-id="{{item.objectId}}">
+        <image class='phone-icon' data-id="{{item.objectId}}" src="../../image/phone_icon.png"></image>
+        <text data-id="{{item.objectId}}">{{item.phone}}</text>
+      </view>
+    </view>
+  </view>
+  <image class="addButton" src="../../image/add_icon.png" 
+  bindtap="onAddClick" mode="aspectFit"></image>
+
+</view>

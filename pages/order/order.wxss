@@ -1,0 +1,231 @@
+/* pages/order/order.wxss */
+.pageContainer {
+  height: 100%;
+  background-color: #ededed;
+}
+
+/**
+ * 搜索栏容器
+ */
+ .search-container {
+   width: 100%;
+   padding: 6px;
+   background-color: transparent; 
+   opacity: 1;
+   position: fixed;
+   z-index: 3;
+ }
+ .search-style-normal {
+   margin-right: 30rpx;
+   background-color: transparent;
+   opacity: 0.82; 
+   border: none
+ }
+
+ .search-style-underway {
+   margin-right: 30rpx;
+   background-color: transparent;
+   opacity: 1; 
+   border: none
+ }
+
+ .search-cancel {
+   font-size: 14px;
+   color: #464646;
+   padding-left: 14rpx;
+   padding-right: 14rpx;
+   text-align: center;
+   background: #fff;
+   border-radius: 10rpx;
+ }
+
+ .search-result-container {
+   width: 100%;
+   margin: 0;
+   top: 0;
+   right: 10rpx;
+   padding: 0;
+
+ }
+
+ .search-result-text {
+   width: 100%;
+   text-align: center;
+   color: #cccccc;
+   font-size: 14px;
+ }
+
+/**
+ * 顶部header容器
+ */
+ .headerContainer {
+   width: 100%;
+   height: 350rpx;
+   position: relative;
+  
+ }  
+
+/**
+ * 顶部header背景图片
+ */
+.header {
+  width: 100%; 
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 350rpx;
+  
+}
+
+/**
+ * header容器左上角头像
+ */
+.avatar {
+  position: absolute;
+  width: 60rpx;
+  height: 60rpx;
+  top: 68rpx;
+  left: 70rpx;
+  border-radius: 50%;
+}
+
+.emptyTip {
+  padding: 10px;
+  font-size: 16px;
+  color: #cccccc;
+  text-align: center;
+}
+
+.list-container {
+  height: 100%;
+  display: flex;
+  overflow: auto;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 200rpx 0;
+  box-sizing: border-box;
+}
+
+.card {
+  border: 2px solid #ffffff;
+  background-color: #ffffff;
+  margin-top: 2px;
+  position: relative;
+}
+
+.title {
+  padding-top: 10px;
+  padding-left: 20px;
+  font-size: 20px;
+  color: #2c2c2c;
+  display: flex;
+  /* position: absolute;
+  z-index: 1; */
+}
+
+.time {
+  float: right;
+  padding-right: 20px;
+  padding-top: 12px;
+  position: absolute;
+  color: #cccccc;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  font-size: 16px;
+}
+
+.money {
+  float: right;
+  padding-right: 20px;
+  padding-top: 12px;
+  margin-top: 32px;
+  position: absolute;
+  color: #f8e300;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  font-size: 16px;
+}
+/*所购商品信息*/
+.goodInfo {
+  float: right;
+  padding-right: 20px;
+  padding-top: 12px;
+  margin-top: 88px;
+  position: absolute;
+  color: #2c2c2c;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  font-size: 14px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  word-break: break-all;
+}
+
+.proxy {
+  float: right;
+  padding-right: 20px;
+  padding-top: 12px;
+  margin-top: 54px;
+  position: absolute;
+  color: #cccccc;
+  top: 0;
+  right: 0;
+  z-index: 1;
+  font-size: 14px;
+}
+
+.location {
+  width: 50%;
+  padding-left: 20px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  /* position: absolute; */
+  color: #cccccc;
+  /* margin-top: 34px; */
+  /* z-index: 1; */
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+
+.location-icon {
+  width: 16px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.phone {
+  width: 50%;
+  padding-left: 20px;
+  padding-bottom: 10px;
+  /* position: absolute; */
+  color: #cccccc;
+  /* margin-top: 78px; */
+  /* z-index: 1; */
+  font-size: 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center
+}
+
+.phone-icon {
+  width: 16px;
+  height: 18px;
+  margin-right: 10px;
+}
+
+.addButton {
+  width: 60px;
+  height: 60px;
+  float: right;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+  margin: 16px;
+}
